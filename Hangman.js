@@ -213,6 +213,12 @@ const gameOver = (isVictory) => {
         gameModal.querySelector("p").innerHTML = `<b>${modalText} ${lowerWord}.</b>`;
         gameModal.classList.add("show");
     }
+    else if (lowerType === "definition" && lowerFirstHint === "gamma ray") {
+        const modalText = isVictory ? `${currentHint} is the` : `${currentHint} is the`;
+        gameModal.querySelector("h4").innerText = isVictory ? 'Well Done!' : 'Try Again!';
+        gameModal.querySelector("p").innerHTML = `<b>${modalText} ${currentWord}.</b>`;
+        gameModal.classList.add("show");
+    }
     else if (currentType === "EM Frequency" && currentWord === "X-ray") {
         const modalText = isVictory ? `The frequency of ${currentWord} is` : `The frequency of ${currentWord} is`;
         gameModal.querySelector("h4").innerText = isVictory ? 'Well Done!' : 'Try Again!';
