@@ -525,12 +525,12 @@ const wordList =  [
         type: "Term"
     },
     {
-        word: "Direct current (D.C.) circuit",
+        word: "Direct current (DC) circuit",
         hint: "Current that flows in only 1 direction with low applied voltage",
         type: "Term"
     },
     {
-        word: "Alternating current (A.C.) circuit",
+        word: "Alternating current (AC) circuit",
         hint: "Current that changes direction 50 or 60 times every second with high applied voltage",
         type: "Term"
     },
