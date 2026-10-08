@@ -467,7 +467,7 @@ const wordList =  [
     {
         word: "Distance between optical centre and principal focus point",
         hint: "Focal length",
-        type: "Defintion"
+        type: "Definition"
     },
     {
         word: "Electric charge",
