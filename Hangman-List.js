@@ -1010,7 +1010,7 @@ const wordList =  [
         type: "Formula"
     },
     {
-        word: "Potentail difference ÷ Current",
+        word: "Potential difference ÷ Current",
         hint: "Resistance",
         type: "Formula"
     },
