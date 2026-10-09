@@ -195,7 +195,7 @@ const wordList =  [
         type: "Definition"
     },
     {
-        word: "Energy that cannot be created or destroyed but can be transferred from one store to another while maintaining the total energy of the isolated system",
+        word: "Energy cannot be created or destroyed but can be transferred from one store to another while maintaining the total energy of the isolated system",
         hint: "Principle of conservation of energy",
         type: "Definition"
     },
