@@ -159,7 +159,9 @@ const getRandomWord = () => {
     currentQnNumber++;
     askedWordsCount++;
 
-    questionCountText.innerText = `${currentQnNumber} of ${wordList.length}`;
+    if (questionCountText) {
+        questionCountText.innerText = `${currentQnNumber} of ${wordList.length}`;
+    }
 
     const { word, hint, type } = chosenWord;
     currentWord = word;
