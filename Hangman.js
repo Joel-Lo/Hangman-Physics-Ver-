@@ -9,6 +9,9 @@ const burgerMenu = document.getElementById("burgerMenu");
 const infoBox = document.getElementById("infoBox");
 const closeInfoBtn = document.getElementById("closeInfo");
 const bgLayer = document.createElement("div");
+const questionCountText = document.querySelector(".question-count-text b");
+let currentQnNumber = 0;
+let askedWordsCount = 0;
 let currentWord, correctLetters, wrongGuessCount, currentHint, currentType;
 let recentWords = [];
 
@@ -135,6 +138,12 @@ const getRandomWord = () => {
     let chosenWord;
     let attempts = 0;
     
+    if (askedWordsCount >= wordList.length) {
+        currentQnNumber = 0;
+        askedWordsCount = 0;
+        recentWords = []; 
+    }
+
     do {
         randomIndex = Math.floor(Math.random() * wordList.length);
         chosenWord = wordList[randomIndex];
@@ -147,6 +156,11 @@ const getRandomWord = () => {
         recentWords.shift(); 
     }
 
+    currentQnNumber++;
+    askedWordsCount++;
+
+    questionCountText.innerText = `${currentQnNumber} of ${wordList.length}`;
+
     const { word, hint, type } = chosenWord;
     currentWord = word;
     currentHint = hint; 
@@ -157,7 +171,6 @@ const getRandomWord = () => {
     document.querySelector(".concept-text b").innerText = capitalizedType;
     resetGame();
 };
-
 
 const gameOver = (isVictory) => {
     const lowerType = currentType.charAt(0).toLowerCase() + currentType.slice(1);
