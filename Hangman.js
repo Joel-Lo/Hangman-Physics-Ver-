@@ -237,7 +237,7 @@ const gameOver = (isVictory) => {
     else if (lowerType === "definition" && lowerFirstHint === "first law of reflection" | lowerFirstHint === "second law of reflection" | lowerFirstHint === "first law of refraction" | lowerFirstHint === "second law of refraction" | lowerFirstHint === "principle of conservation of energy") {
         const modalText = isVictory ? `The ${lowerFirstHint} states that` : `The ${lowerFirstHint} states that`;
         gameModal.querySelector("h4").innerText = isVictory ? 'Well Done!' : 'Try Again!';
-        gameModal.querySelector("p").innerHTML = `<b>${modalText} ${currentWord}.</b>`;
+        gameModal.querySelector("p").innerHTML = `<b>${modalText} ${lowerWord}.</b>`;
         gameModal.classList.add("show");
     }
     else if (currentType === "EM Frequency" && currentWord === "X-ray") {
